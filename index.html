@@ -1,0 +1,303 @@
+
+<html>
+<head>
+<title>Haborplace redevelopment interactive</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;1,200&display=swap" rel="stylesheet">
+
+
+
+
+<script>
+
+  var iadata = [{
+      "putitle": "The Sail",
+      "pucurrent": "Currently Pratt Street Pavilion",
+      "pubody": "The Sail, a 200,000-square-foot commercial building, would replace the Harborplace pavilion adjacent to East Pratt Street. A see-through first floor would provide a clear path to the Inner Harbor where loading docks and trash compactors now stand. A 50,000-square-foot public park on a tiered rooftop would sit above a marketplace on the first two floors, with restaurant, event and commercial space on the upper levels.",
+      "puimage": "https://www.baltimoresun.com/resizer/F26RrZkhNPr8q6tqA2wYLH1v3fs=/600x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/tronc/7DXPDNLXVNEJVDHBOU4Y6FMKAE.jpeg",
+      "pualt": "The new 201 E Pratt St. will offer retail and commercial space. It will house a marketplace on the first two floors, and offer restaurant, venue, and commercial space on the upper levels."
+    }, {
+    "putitle": "303 Light Street",
+      "pucurrent": "Currently Light Street Pavilion",
+      "pubody": "The Harborplace pavilion adjacent to Light Street would be demolished for conjoined apartment towers of 32 and 25 stories with around 900 units and two floors of retail, dining and community space.",
+      "puimage": "https://www.baltimoresun.com/resizer/cIw9nM7Ibe1qX1P8oHFEn1HoV6w=/600x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/tronc/CNNBHPR4KFFBLBJVTZCLE267AE.jpeg",
+      "pualt": "Overlooking floating wetlands, floating piers, and the U.S.S. Constellation, 303 Light St. will offer multifamily housing on the upper floors and retail and restaurants on the bottom two floors."
+    }, {
+    "putitle": "203 E. Pratt",
+      "pucurrent": "Currently Pratt Street Pavilion",
+      "pubody": "Another 200,000-square-foot commercial building between The Sail and the World Trade Center would be elevated above an open ground floor and offer waterfront commercial space.",
+      "puimage": "https://www.baltimoresun.com/resizer/GRuRsXAIt9YA61JQD04I2Bnm83Y=/600x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/tronc/5TAT5NZJZVEFVFFWCEI24FUXO4.jpeg",
+      "pualt": "Close up of 203 E. Pratt in rendering with promenade, floating wetlands and waterfront in foreground"
+    }, {
+    "putitle": "Park at Freedom’s Port",
+      "pucurrent": "Currently McKeldin Plaza",
+      "pubody": "This 30,000-square-foot park would replace the concrete-and-brick McKeldin Plaza and Light Street’s slip lane to Calvert and Pratt streets with green space and shade. It would feature a 2,000-seat amphitheater and elevated space for dining and recreation. The intersection of Light and Pratt would be squared off.",
+      "puimage": "https://www.baltimoresun.com/resizer/qwu9LRJ0HcIBGX9-mOcKIrx4PqQ=/600x0/filters:format(png):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/tronc/AIZA2VVLNJA77P7PYV7HL2QY3Y.png",
+      "pualt": "MCB Real Estate renderings of its plans for the redevelopment of the Harborplace pavilions. Where McKeldin Plaza currently sits would be the new Park at Freedom’s Port. Developers say that by connecting McKeldin Plaza, they can create a waterfront park with more green space."
+    }, {
+    "putitle": "The Crescent",
+      "pucurrent": "Currently concrete and brick walkways",
+      "pubody": "The Harbor would be lined from West Shore Park to the World Trade Center by this two-tiered promenade. Sections of a lower boardwalk would be floating alongside new wetlands.",
+      "puimage": "https://www.baltimoresun.com/resizer/8VhrJfTCW4032djFuI2eV3fSH80=/1024x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/tronc/IBP6ZHTXDBFPPHT2E7BKFB4MJA.jpeg",
+      "pualt": "MCB Real Estate envisions an upper and lower promenade as the center of the new Harborplace, connecting to the new Park at Freedom’s Port."
+    }, {
+    "putitle": "West Shore Park",
+      "pucurrent": "Currently West Shore Park",
+      "pubody": "A revamped West Shore Park would run adjacent to Light Street with trees, benches and pedestrian paths.",
+      "puimage": "https://www.baltimoresun.com/resizer/HVuzKO20F0qtHE2dQrqdjQYcgsc=/600x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/tronc/CRHRAJCKFVCCPFTAKRWQJLJBME.jpeg",
+      "pualt": "Lots of trees are envisioned for a revamped West Shore Park, seen from an elevated view in this rendering with the existing visitor's center and new proposed 303 Light Street apartment towers in the background."
+    }];
+    
+    
+    
+    
+    function getPopUp(n) {
+    
+    
+   
+    
+    var iatitle = document.getElementById("iatitle");
+    var iacurrent = document.getElementById("iacurrent");
+    var idimg = document.getElementById("idimg");
+    var idcopy = document.getElementById("idcopy");
+    
+
+    iatitle.innerHTML = iadata[n].putitle;
+	iacurrent.innerHTML = iadata[n].pucurrent;
+    idimg.src = iadata[n].puimage;
+    idimg.alt = iadata[n].pualt;
+    idcopy.innerHTML = iadata[n].pubody;
+    
+    
+    
+    
+    document.getElementById("iapopup").style.display = "block";
+    
+    }
+    
+    
+    
+    
+    function closePopUp() {
+    
+     document.getElementById("iapopup").style.display = "none";
+    }
+
+</script>
+
+
+<style>
+
+
+
+
+
+#igwrap {
+font-family: 'Noto Sans', sans-serif;
+font-weight: 200;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+#iaimg {
+background-image: url("https://www.baltimoresun.com/resizer/23G3BNMxZqU2N6kMmIVQ0nF5EGI=/1024x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/tronc/ZYZZFC3SJBCFFESWQEMISZ2SCY.jpg");
+background-size: cover;
+width: 100%;
+max-width: 800px;
+aspect-ratio: 1.797727;
+position: relative;
+}
+.iamarker {
+position: absolute;
+width: 14px;
+height: 14px;
+border-radius: 50%;
+background: #fff;
+border: 3px solid #000;
+cursor: pointer;
+}
+#sailmarker {
+left: 62%;
+top: 62%;
+}
+#lightmarker {
+left: 18%;
+top: 40%;
+}
+#prattmarker {
+left: 78%;
+top: 57%;
+}
+#freedommarker {
+left: 42%;
+top: 65%;
+}
+#crescentmarker {
+left: 30%;
+top: 70%;
+}
+#westmarker {
+left: 2%;
+top: 76%;
+}
+#iapopup {
+  position: absolute;
+z-index: 2;
+  width: calc (100% - 28px);
+  max-width: 450px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  font-size: .78em;
+  padding: 14px;
+  display: none;
+}
+#iacurrent {
+font-style: italic;
+}
+#iatitle {
+margin: -12px 0 6px 0;
+line-height: 118%;
+font-size: 1.3em;
+padding-bottom: 2px;
+border-bottom: 1px solid #ccc;
+}
+#idimg {
+width: 45%;
+max-width: 225px;
+float: right;
+margin: 4px 0 10px 10px;
+}
+#idcopy {
+margin-top: 5px;
+line-height: 138%;
+}
+#closebtn {
+width: 100%;
+text-align: right;
+color: #5c5c5c;
+margin-top: -8px;
+}
+#closex {
+font-size: 1.267em;
+position: relative;
+left: 9px;
+cursor: pointer;
+ -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+@media screen and (min-width: 400px) {
+#iapopup {
+  width: calc (100% - 32px);
+  font-size: .82em;
+  padding: 16px;
+}
+#idimg {
+margin: 5 0 12px 12px;
+}
+}
+@media screen and (min-width: 450px) {
+#idimg {
+width: 50%;
+margin: 6 0 14px 14px;
+}
+#idcopy {
+margin-top: 7px;
+line-height: 142%;
+}
+#iatitle {
+margin: -10px 0 12px 0;
+padding-bottom: 3px;
+}
+
+}
+
+@media screen and (min-width:500px) {
+#iapopup {
+  height: auto;
+  aspect-ratio: 1.797727;
+  left: 0;
+    width: 90%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+    font-size: .833em;
+}
+#idimg {
+width: 60%;
+margin: 7px 0 16px 16px;
+}
+#idcopy {
+margin-top: 8px;
+line-height: 148%;
+}
+#iatitle {
+margin: -10px 0 14px 0;
+}
+}
+
+
+@media screen and (min-width:600px) {
+#iapopup {
+    font-size: .833em;
+}
+#idcopy {
+line-height: 155%;
+}
+#idimg {
+margin: 8px 0 18px 18px;
+}
+}
+
+@media screen and (min-width:750px) {
+#iapopup {
+padding: 22px;
+ font-size: .85em;
+}
+#iatitle {
+margin: -10px 0 18px 0;
+}
+}
+
+</style>
+
+</head>
+<body>
+<div id="igwrap">
+<div id="iaimg">
+
+<div class="iamarker" id="sailmarker" onclick="getPopUp(0);"></div>
+<div class="iamarker" id="lightmarker" onclick="getPopUp(1);"></div>
+<div class="iamarker" id="prattmarker" onclick="getPopUp(2);"></div>
+<div class="iamarker" id="freedommarker" onclick="getPopUp(3);"></div>
+<div class="iamarker" id="crescentmarker" onclick="getPopUp(4);"></div>
+<div class="iamarker" id="westmarker" onclick="getPopUp(5);"></div>
+
+
+<div id="iapopup">
+<div id="closebtn"><span id="closex" class="material-symbols-outlined" onclick="closePopUp();">
+close</span></div>
+<h3 id="iatitle"></h3>
+<img src="" id="idimg" alt="">
+<span id="iacurrent"></span>
+<p id="idcopy"></p>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
